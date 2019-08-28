@@ -16,9 +16,7 @@ RUN git config --global url.ssh://git@github.com/.insteadOf https://github.com/
 RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
 
 # Get private repo/s
-#RUN go get -u github.com/lukekhamilton/private_golang
-#RUN go install github.com/lukekhamilton/private_golang
-RUN go get -u bitbucket.org/lukekhamilton/private_golang
+RUN go get -u github.com/lukekhamilton/private_golang
 
 # Remove ssh key
 RUN rm /root/.ssh/id_rsa && unset SSH_KEY
