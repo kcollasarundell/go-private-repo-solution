@@ -12,7 +12,7 @@ RUN eval `ssh-agent` && ssh-add /root/.ssh/id_rsa
 
 RUN ssh-keyscan bitbucket.org >> /root/.ssh/known_hosts
 
-RUN git config --global url.ssh://git@bitbucket.org/.insteadOf https://api.bitbucket.org
+RUN git config --global url.ssh://git@bitbucket.org/.insteadOf https://bitbucket.org
 
 RUN echo "Host bitbucket.org\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
 
